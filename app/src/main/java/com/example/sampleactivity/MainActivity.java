@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager mPager;
     private TabLayout mTabLayout;
-    Button toggle1,toggle2;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +33,7 @@ public class MainActivity extends AppCompatActivity {
         // For cardview on JOURNAL Page
 
         // buttons
-        toggle1 = findViewById(R.id.btn_src1);
-        toggle2 = findViewById(R.id.btn_src2);
-        Button selfAssessment = (Button)findViewById(R.id.btn_dsa);
-        Button dailyChallenge = (Button)findViewById(R.id.btn_dc);
-        Button ineedhelp = (Button)findViewById(R.id.btn_inh);
 
-
-        ineedhelp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,Ineedhelp.class));
-            }
-        });
 
         // Main menu bar
         mPager = findViewById(R.id.main_activity_pager);

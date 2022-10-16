@@ -14,8 +14,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/journal_relativeLayout"
-        android:layout_width="391dp"
-        android:layout_height="319dp"
+        android:layout_width="388dp"
+        android:layout_height="366dp"
         android:padding="16dp">
 
         <TextView

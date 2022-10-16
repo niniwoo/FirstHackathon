@@ -2,11 +2,11 @@
     <string name="app_name">SampleActivity</string>
 
     <!-- main activity screen text -->
-    <string name="tab_menu_home">H</string>
-    <string name="tab_menu_resources">R</string>
-    <string name="tab_menu_tracker">T</string>
-    <string name="tab_menu_journal">J</string>
-    <string name="tab_menu_community">C</string>
+    <string name="tab_menu_home">Home</string>
+    <string name="tab_menu_resources">Resource</string>
+    <string name="tab_menu_tracker">Tracking</string>
+    <string name="tab_menu_journal">Journal</string>
+    <string name="tab_menu_community">Community</string>
 
     <!-- main activity menu text -->
     <string name="menu_title">Menu</string>
@@ -30,4 +30,9 @@
     <string name="btnFrag1">Learning</string>
     <string name="btnFrag2">Self-Care</string>
     <string name="breath">breath</string>
+    <string name="res_watch">WATCH</string>
+    <string name="res_read">READ</string>
+    <string name="res_wDes">lorem ipsum quia dolor sit amet, consectetur, adipisci velit.</string>
+    <string name="btn_assessment">Take Assessment</string>
+    <string name="btn_submit">submit</string>
 </resources>

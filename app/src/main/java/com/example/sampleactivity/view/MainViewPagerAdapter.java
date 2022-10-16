@@ -1,17 +1,29 @@
 package com.example.sampleactivity.view;
 
+import static android.app.PendingIntent.getActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.example.sampleactivity.Assessment;
+import com.example.sampleactivity.Ineedhelp;
+import com.example.sampleactivity.LearningFrag;
+import com.example.sampleactivity.MainActivity;
 import com.example.sampleactivity.R;
+import com.example.sampleactivity.SelfcareFrag;
 
 public class MainViewPagerAdapter extends PagerAdapter {
     RecyclerView jRecyclerView, cRecyclerView;
@@ -20,6 +32,7 @@ public class MainViewPagerAdapter extends PagerAdapter {
 
     private Context mContext = null;
 
+
     public MainViewPagerAdapter(Context mContext) {
         this.mContext = mContext;
     }
@@ -27,6 +40,8 @@ public class MainViewPagerAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
+
+
         View view = null;
         if (mContext != null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -34,9 +49,66 @@ public class MainViewPagerAdapter extends PagerAdapter {
                 case 0:
                 default:
                     view = inflater.inflate(R.layout.home0, container, false);
+                    Button selfAssessment = (Button) view.findViewById(R.id.btn_dsa);
+                    selfAssessment.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(mContext, Assessment.class);
+                            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            mContext.startActivity(i);
+                        }
+                    });
+                    Button dailyChallenge = (Button) view.findViewById(R.id.btn_dc);
+                    Button ineedhelp = (Button) view.findViewById(R.id.btn_inh);
+//                    Button assessment = (Button) view.findViewById(R.id.btn_assessment);
+//                    assessment.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View view) {
+//                            Intent i = new Intent(mContext, Assessment.class);
+//                            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                            mContext.startActivity(i);
+//                        }
+//                    });
+
+                    ineedhelp.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(mContext, Ineedhelp.class);
+                            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            mContext.startActivity(i);
+                        }
+                    });
                     break;
                 case 1:
                     view = inflater.inflate(R.layout.resources1, container, false);
+
+                    Button toggl1 = (Button) view.findViewById(R.id.btn_src1);
+                    Button toggl2 = (Button) view.findViewById(R.id.btn_src2);
+
+                    toggl1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+//                            Fragment learningFrag = new LearningFrag();
+//                            FragmentManager fm = getSupportFragmentManager();
+//                            FragmentTransaction ft = fm.beginTransaction();
+//                            ft.replace(R.id.framelayout,learningFrag);
+//                            ft.commit();
+                        }
+                    });
+
+                    toggl2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+//                            Fragment selfCare = new SelfcareFrag();
+//                            FragmentManager fm = getSupportFragmentManager();
+//                            FragmentTransaction ft = fm.beginTransaction();
+//                            ft.replace(R.id.framelayout,selfCare);
+//                            ft.commit();
+                        }
+                    });
+
+
+
                     break;
                 case 2:
                     view = inflater.inflate(R.layout.tracker2, container, false);
@@ -91,6 +163,7 @@ public class MainViewPagerAdapter extends PagerAdapter {
         }
 
         return returnString;
+
     }
 
     @Override
