@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_inh"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#009CDC"
+        android:text="@string/emergency1"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="@string/emergency"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btn_dc"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dc" />
+
+    <CheckBox
+        android:id="@+id/cb1"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="50dp"
+        android:background="#C4E0EE"
+        android:text="Take Medication "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cb2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/reminder"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cb1"
+        app:layout_constraintStart_toStartOf="@+id/cb1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb2"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="17dp"
+        android:background="#C4E0EE"
+        android:text="Complete Goal "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/cb1" />
+
+    <Button
+        android:id="@+id/btn_dsa"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#757575"
+        android:text="@string/conquer1"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_dc"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="63dp"
+        android:text="@string/conquer"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_dc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb2" />
+
+    <Button
+        android:id="@+id/btn_dc"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="19dp"
+        android:backgroundTint="#757575"
+        android:text="@string/conquer2"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/btn_dsa"
+        app:layout_constraintStart_toStartOf="@+id/btn_dsa"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

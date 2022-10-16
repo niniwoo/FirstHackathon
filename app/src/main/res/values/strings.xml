@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">SampleActivity</string>
+
+    <!-- main activity screen text -->
+    <string name="tab_menu_home">H</string>
+    <string name="tab_menu_resources">R</string>
+    <string name="tab_menu_tracker">T</string>
+    <string name="tab_menu_journal">J</string>
+    <string name="tab_menu_community">C</string>
+
+    <!-- main activity menu text -->
+    <string name="menu_title">Menu</string>
+    <string name="menu_item_1">Item 1</string>
+    <string name="menu_item_2">Item 2</string>
+    <string name="menu_item_3">Item 3</string>
+    <string name="menu_item_4">Item 4</string>
+    <string name="reminder">Reminders</string>
+    <string name="reminder1">Take Medication</string>
+    <string name="reminder2">Complete Goal</string>
+    <string name="conquer">Conquer Today</string>
+    <string name="conquer1">Today\'s Check-In</string>
+    <string name="conquer2">Today\'s Challenge</string>
+    <string name="emergency">Emergency</string>
+    <string name="emergency1">I need help</string>
+    <string name="emergency2">I\'m having an episode</string>
+    <string name="inh1">Mental Health Hotline</string>
+    <string name="inh2">Suicide Hotline</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btnFrag1">Learning</string>
+    <string name="btnFrag2">Self-Care</string>
+    <string name="breath">breath</string>
+</resources>
